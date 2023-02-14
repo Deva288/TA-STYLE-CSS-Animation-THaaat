@@ -1,0 +1,173 @@
+@import "reset";
+@import "vars";
+@import "general";
+@import "grid";
+
+
+.container{
+    display: grid;
+    gap: 2rem;
+    place-content: center;
+    grid-template-columns: repeat(6, 50px);
+    padding: 1rem;
+    border: 10px solid;
+    &:hover .box{
+        height: 250px;
+      }
+}
+.box{
+    width: 50px;
+    height: 50px;
+    background-color: $red;
+    border: 1px solid black;
+    display: grid;
+    place-items: center;
+    transition-property: all;
+    transition-duration: 1s;
+}
+.b1{
+    color: white;
+    transition-timing-function: ease;
+}
+.b2{
+    color: black;
+    background-color: $yellow;
+    transition-timing-function: linear;
+}
+.b3{
+    color: white;
+    background-color: $coral;
+    transition-timing-function: ease-in;
+}
+.b4{
+    color: red;
+    background-color: white;
+    transition-timing-function: ease-out;
+}
+.b5{
+    color: white;
+    background-color: $blue;
+    transition-timing-function: ease-in-out;
+}
+.b6{
+    color: white;
+    background-color: $brown;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.37, 1.6)
+}
+
+// 2-D Effects
+.container-2d{
+    display: grid;
+    gap: 5rem;
+    place-content: center;
+    grid-template-columns: repeat(4, 100px);
+}
+.box2d{
+    height: 100px;
+    width: 100px;
+    background-color: $green;
+    display: grid;
+    place-items: center;
+}
+.b7{
+   border-radius: 1% 60% 60% 60%;
+   transition: all 2s linear;
+   color: white;
+   &:hover{
+    background-color: $red;
+    transform: rotate(2turn);
+   }
+}
+.b8{
+    color: white;
+   transition: all 2s ease-in-out;
+   &:hover{
+    background-color: $blue;
+    transform: scale(1.5);
+   }
+}
+.translate{
+    position: absolute;
+    margin-left: 900px;
+}
+.b9{
+    background-color: $yellow;
+}
+.b10{
+    color: white;
+    background-color: rgba(green, 0.7);
+    transition: all 2s ease-in-out;
+    &:hover{
+        transform: translate(50px, 50px);
+    }
+}
+.skew{
+    position: absolute;
+    margin-left: 700px;
+}
+.b11{
+    background-color: $red;
+}
+.b12{
+    color: white;
+    background-color: rgba(green, 0.7);
+    transition: all 2s ease-in-out;
+    &:hover{
+        transform: skew(40deg, -30deg);
+    }
+}
+
+// 3D Effects
+.container-3d{
+    max-width: 600px;
+    margin: 0 auto;
+    border: 5px solid;
+    &:hover .box3d{
+        animation-name: myAnimation;
+        animation-duration: 2s;
+    }
+}
+.box3d{
+    height: 40px;
+    width: 40px;
+    background-color: $green;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin: 1rem;
+    position: relative;
+}
+.b14{
+   background-color: $red;
+   animation-timing-function: ease;
+}
+.b15{
+    background-color: $yellow;
+    animation-timing-function: linear;
+ }
+ .b16{
+    background-color: $blue;
+    animation-timing-function: ease-in;
+ }
+ .b17{
+    background-color: $brown;
+    animation-timing-function: ease-out;
+ }
+ .b17{
+    background-color: $coral;
+    animation-timing-function: ease-in-out;
+ }
+ @keyframes myAnimation{
+    0%{
+        left: 0;
+    }
+    25%{
+        left: 100px;
+    }
+    50%{
+        left: 200px;
+    }
+    100%{
+        left: 400px;
+    }
+ }

@@ -1,0 +1,271 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background-color: chartreuse;
+  padding-bottom: 4rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.container-2d {
+  margin: 2rem auto;
+}
+
+h1, h2, h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: coral;
+  text-align: center;
+  margin: 2rem;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+  place-content: center;
+  grid-template-columns: repeat(6, 50px);
+  padding: 1rem;
+  border: 10px solid;
+}
+.container:hover .box {
+  height: 250px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border: 1px solid black;
+  display: grid;
+  place-items: center;
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+.b1 {
+  color: white;
+  transition-timing-function: ease;
+}
+
+.b2 {
+  color: black;
+  background-color: yellow;
+  transition-timing-function: linear;
+}
+
+.b3 {
+  color: white;
+  background-color: coral;
+  transition-timing-function: ease-in;
+}
+
+.b4 {
+  color: red;
+  background-color: white;
+  transition-timing-function: ease-out;
+}
+
+.b5 {
+  color: white;
+  background-color: blue;
+  transition-timing-function: ease-in-out;
+}
+
+.b6 {
+  color: white;
+  background-color: brown;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.37, 1.6);
+}
+
+.container-2d {
+  display: grid;
+  gap: 5rem;
+  place-content: center;
+  grid-template-columns: repeat(4, 100px);
+}
+
+.box2d {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  display: grid;
+  place-items: center;
+}
+
+.b7 {
+  border-radius: 1% 60% 60% 60%;
+  transition: all 2s linear;
+  color: white;
+}
+.b7:hover {
+  background-color: red;
+  transform: rotate(2turn);
+}
+
+.b8 {
+  color: white;
+  transition: all 2s ease-in-out;
+}
+.b8:hover {
+  background-color: blue;
+  transform: scale(1.5);
+}
+
+.translate {
+  position: absolute;
+  margin-left: 900px;
+}
+
+.b9 {
+  background-color: yellow;
+}
+
+.b10 {
+  color: white;
+  background-color: rgba(0, 128, 0, 0.7);
+  transition: all 2s ease-in-out;
+}
+.b10:hover {
+  transform: translate(50px, 50px);
+}
+
+.skew {
+  position: absolute;
+  margin-left: 700px;
+}
+
+.b11 {
+  background-color: red;
+}
+
+.b12 {
+  color: white;
+  background-color: rgba(0, 128, 0, 0.7);
+  transition: all 2s ease-in-out;
+}
+.b12:hover {
+  transform: skew(40deg, -30deg);
+}
+
+.container-3d {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 5px solid;
+}
+.container-3d:hover .box3d {
+  animation-name: myAnimation;
+  animation-duration: 2s;
+}
+
+.box3d {
+  height: 40px;
+  width: 40px;
+  background-color: green;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  margin: 1rem;
+  position: relative;
+}
+
+.b14 {
+  background-color: red;
+  animation-timing-function: ease;
+}
+
+.b15 {
+  background-color: yellow;
+  animation-timing-function: linear;
+}
+
+.b16 {
+  background-color: blue;
+  animation-timing-function: ease-in;
+}
+
+.b17 {
+  background-color: brown;
+  animation-timing-function: ease-out;
+}
+
+.b17 {
+  background-color: coral;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes myAnimation {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 100px;
+  }
+  50% {
+    left: 200px;
+  }
+  100% {
+    left: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */
